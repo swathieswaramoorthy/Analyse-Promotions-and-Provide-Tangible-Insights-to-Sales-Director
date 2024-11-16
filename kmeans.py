@@ -5,7 +5,6 @@ from sklearn.cluster import KMeans
 
 
 df = pd.read_csv('combined_data.csv')
-
 label_encoder = LabelEncoder()
 for col in ['promo_type', 'city', 'campaign_name', 'category']:
     df[col] = label_encoder.fit_transform(df[col])
